@@ -1,0 +1,19 @@
+{
+    "tasks":[
+        {
+            "text":"Zakupy",
+            "date":"05.05.2022",
+            "done":false
+        },
+        {
+            "text":"Szkoła",
+            "date":"05.05.2022",
+            "done":true
+        },
+        {
+            "text":"Spacer",
+            "date":"05.05.2022",
+            "done":false
+        }
+    ]
+}
