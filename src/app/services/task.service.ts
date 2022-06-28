@@ -11,5 +11,7 @@ export class TaskService {
 
   constructor(private httpClient: HttpClient) { }
 
-  
+  getTask():Observable<Task[]> {
+    return this.httpClient.get<Task[]>(this.apiUrl);
+  }
 }
