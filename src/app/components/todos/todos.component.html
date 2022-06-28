@@ -1,8 +1,4 @@
 
 <ul class="collection">
-    <li class="collection-item row" *ngFor="let task of tasks let index = index">
-        <span class="col s10">
-            {{index + 1}} {{task.text}} - {{task.date}}
-        </span>
-    </li>
+    <app-todo [todos]="todos"></app-todo>
 </ul>

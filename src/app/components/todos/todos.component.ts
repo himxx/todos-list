@@ -9,12 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TodosComponent implements OnInit {
 
-  tasks:Task[] = [];
+  todos:Task[] = [];
 
   constructor(private taskService: TaskService) { }
 
   ngOnInit(): void {
-    this.taskService.getTask().subscribe(tasks => this.tasks = tasks);
+    this.taskService.getTask().subscribe(tasks => this.todos = tasks);
   }
 
 }
