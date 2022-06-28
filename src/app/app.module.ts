@@ -6,13 +6,17 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { TodosComponent } from './components/todos/todos.component';
 import { TodoComponent } from './components/todo/todo.component';
+import { ButtonComponent } from './components/button/button.component';
+import { FormComponent } from './components/form/form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     TodosComponent,
-    TodoComponent
+    TodoComponent,
+    ButtonComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
