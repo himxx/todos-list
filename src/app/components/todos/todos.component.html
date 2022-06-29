@@ -1,5 +1,10 @@
 <app-form (newTaskEmit)="addTodo($event)"></app-form>
 
-<ul class="collection">
+<ul *ngIf="todos.length > 0; else noTasks" class="collection">
     <app-todo (taskEmit)="removeTodo($event)" [todos]="todos"></app-todo>
 </ul>
+<ng-template #noTasks>
+    <h1>Brak zadań</h1>
+</ng-template>
+
+<app-button *ngIf="todos.length > 0" (click)="clearTasks()" customClasses="btn red">Wyczyść</app-button>

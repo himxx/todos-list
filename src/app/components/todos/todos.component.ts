@@ -17,12 +17,16 @@ export class TodosComponent implements OnInit {
     this.taskService.getTask().subscribe(tasks => this.todos = tasks);
   }
 
-  addTodo(task:Task) {
+  clearTasks():void {
+    this.todos = [];
+  }
+
+  addTodo(task:Task):void {
     this.taskService.addTask(task).subscribe(task => this.todos.unshift(task));
     
   }
 
-  removeTodo(task:Task) {
+  removeTodo(task:Task):void {
     this.taskService.deleteTask(task)
       .subscribe(
         () => this.todos = this.todos.filter(t => t.id !== task.id)
