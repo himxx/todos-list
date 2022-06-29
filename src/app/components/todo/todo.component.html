@@ -3,7 +3,7 @@
         {{index + 1}} {{task.text}} - {{task.date}}
     </span>
     <div class="col s2 right-align">
-        <app-button customClasses="btn-floating btn-small red">
+        <app-button (btnClick)="removeTask(task)" customClasses="btn-floating btn-small red">
             <i class="material-icons red ">remove</i>
         </app-button>
         <app-button customClasses="btn-floating btn-small green">

@@ -18,7 +18,14 @@ export class TodosComponent implements OnInit {
   }
 
   addTodo(task:Task) {
-    console.log('hej');
-    this.todos.unshift(task);
+    this.taskService.addTask(task).subscribe(task => this.todos.unshift(task));
+    
+  }
+
+  removeTodo(task:Task) {
+    this.taskService.deleteTask(task)
+      .subscribe(
+        () => this.todos = this.todos.filter(t => t.id !== task.id)
+      )
   }
 }

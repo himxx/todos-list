@@ -1,19 +1,28 @@
 {
-    "tasks":[
-        {
-            "text":"Zakupy",
-            "date":"05.05.2022",
-            "done":false
-        },
-        {
-            "text":"Szkoła",
-            "date":"05.05.2022",
-            "done":true
-        },
-        {
-            "text":"Spacer",
-            "date":"05.05.2022",
-            "done":false
-        }
-    ]
+  "tasks": [
+    {
+      "id": 1,
+      "text": "Zakupy",
+      "date": "05.05.2022",
+      "done": false
+    },
+    {
+      "id": 2,
+      "text": "Szkoła",
+      "date": "05.05.2022",
+      "done": true
+    },
+    {
+      "id": 4,
+      "text": "dasdsa",
+      "date": "2022-06-07",
+      "done": false
+    },
+    {
+      "text": "dasdsa",
+      "date": "2022-05-31",
+      "done": false,
+      "id": 5
+    }
+  ]
 }

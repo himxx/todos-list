@@ -1,5 +1,5 @@
 import { Task } from './../../model/task';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-todo',
@@ -9,10 +9,15 @@ import { Component, Input, OnInit } from '@angular/core';
 export class TodoComponent implements OnInit {
 
   @Input() todos?:Task[];
+  @Output() taskEmit = new EventEmitter<Task>();
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  removeTask(task:Task) {
+    this.taskEmit.emit(task);
   }
 
 }
