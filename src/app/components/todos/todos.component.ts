@@ -17,4 +17,8 @@ export class TodosComponent implements OnInit {
     this.taskService.getTask().subscribe(tasks => this.todos = tasks);
   }
 
+  addTodo(task:Task) {
+    console.log('hej');
+    this.todos.unshift(task);
+  }
 }
