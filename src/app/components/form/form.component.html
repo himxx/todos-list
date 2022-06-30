@@ -1,5 +1,5 @@
 <div class="row">
     <input [(ngModel)]="task.text" type="text" class="col s8" placeholder="Dodaj zadanie...">
     <input [(ngModel)]="task.date" type="date" class="col s2">
-    <app-button (btnClick)="addTodo()" customClasses="btn-floating">+</app-button>
+    <app-button [isDisabled]="task.text === '' || task.date === ''" (btnClick)="addTodo()" customClasses="btn-floating">+</app-button>
 </div>
