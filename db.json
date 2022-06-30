@@ -1,3 +1,22 @@
 {
-  "tasks": []
+  "tasks": [
+    {
+      "text": "dasdas",
+      "date": "2022-06-14",
+      "done": true,
+      "id": 2
+    },
+    {
+      "text": "dasdas",
+      "date": "2022-06-07",
+      "done": false,
+      "id": 3
+    },
+    {
+      "text": "dasdsa",
+      "date": "2022-06-10",
+      "done": true,
+      "id": 4
+    }
+  ]
 }
