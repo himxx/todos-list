@@ -10,6 +10,7 @@ export class TodoComponent implements OnInit {
 
   @Input() todos?:Task[];
   @Output() taskEmit = new EventEmitter<Task>();
+  @Output() taskDoneEmit = new EventEmitter<Task>();
 
   constructor() { }
 

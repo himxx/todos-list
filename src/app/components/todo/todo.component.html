@@ -1,4 +1,5 @@
-<li class="collection-item row" *ngFor="let task of todos let index = index">
+<ng-container *ngFor="let task of todos let index = index" [ngSwitch]="task.done">
+<li class="collection-item row under" *ngSwitchCase="false">
     <span class="col s10">
         {{index + 1}} {{task.text}} - {{task.date}}
     </span>
@@ -6,8 +7,13 @@
         <app-button (btnClick)="removeTask(task)" customClasses="btn-floating btn-small red">
             <i class="material-icons red ">remove</i>
         </app-button>
-        <app-button customClasses="btn-floating btn-small green">
+        <app-button customClasses="btn-floating btn-small green" (btnClick)="taskDoneEmit.emit(task)">
             <i class="material-icons ">check</i>
         </app-button>
     </div>
 </li>
+<li class="collection-item row" *ngSwitchCase="true">
+    <h5>Zrobione</h5>
+    <span class="col done">{{task.text}}</span>
+  </li>
+</ng-container>
