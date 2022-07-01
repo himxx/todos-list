@@ -1,5 +1,5 @@
 import { Task } from './../../model/task';
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 
 @Component({
   selector: 'app-form',
@@ -8,7 +8,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class FormComponent implements OnInit {
   @Output() newTaskEmit = new EventEmitter<Task>();
-
+  @Input() editMode!:boolean;
   task: Task = {
     text: '',
     date: '',

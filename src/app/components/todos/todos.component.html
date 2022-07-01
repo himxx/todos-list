@@ -1,4 +1,4 @@
-<app-form (newTaskEmit)="addTodo($event)"></app-form>
+<app-form [editMode]="editMode" (newTaskEmit)="addTodo($event)"></app-form>
 <ul *ngIf="todos.length > 0; else noTasks" class="collection">
   <app-todo
     (taskDoneEmit)="markTaskAsDone($event)"

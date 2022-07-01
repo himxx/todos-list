@@ -1,0 +1,13 @@
+<div class="row">
+    <ng-container *ngIf="editMode; then editOn; else editOff"></ng-container>
+    <ng-template #editOff>
+      <button class="btn col s2 offset-s10 green" (click)="switchEditMode()">
+        Dodaj zadanie
+      </button>
+    </ng-template>
+    <ng-template #editOn>
+      <button class="btn col s2 offset-s10 red" (click)="switchEditMode()">
+        Zakończ
+      </button>
+    </ng-template>
+  </div>

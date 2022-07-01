@@ -2,14 +2,15 @@
   *ngFor="let task of todos; let index = index"
   [ngSwitch]="task.done"
 >
-  <li class="collection-item row under" *ngSwitchCase="false">
-    <span class="col s10">
+  <li class="collection-item row under " *ngSwitchCase="false">
+      <h5>Do zrobienia</h5>
+    <span class="col s10 orange">
       {{ index + 1 }} {{ task.text }} - {{ task.date }}
     </span>
     <div class="col s2 right-align">
       <app-button
         (btnClick)="removeTask(task)"
-        customClasses="btn-floating btn-small red"
+        customClasses="btn-floating btn-small red "
       >
         <i class="material-icons red">remove</i>
       </app-button>
@@ -23,6 +24,6 @@
   </li>
   <li class="collection-item row" *ngSwitchCase="true">
     <h5>Zrobione</h5>
-    <span class="col done">{{ task.text }}</span>
+    <span class="col done ">{{ task.text }}</span>
   </li>
 </ng-container>

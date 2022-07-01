@@ -2,10 +2,12 @@
     text-decoration: line-through;
     background-color: green;
     color: white;
-    
+    padding: 5px 20px;
+
 }
 
 .under span {
     text-decoration: underline;
-    color: red;
+    color: white;
+    padding: 5px 20px;
 }

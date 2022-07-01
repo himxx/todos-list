@@ -1,6 +1,7 @@
 <div class="container">
   <app-header title="Lista zadań"></app-header>
+  <app-main #main></app-main>
   
-  <app-todos></app-todos>
+  <app-todos [editMode]="main.editMode"></app-todos>
   
 </div>
