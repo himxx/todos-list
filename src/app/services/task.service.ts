@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class TaskService {
-  private apiUrl: string = 'http://localhost:3000/tasks';
+  private apiUrl: string = 'https://todo-server-back.herokuapp.com/tasks';
 
   constructor(private httpClient: HttpClient) {}
 

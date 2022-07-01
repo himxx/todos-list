@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main.component.css'],
 })
 export class MainComponent implements OnInit {
-  editMode: boolean = true;
+  editMode: boolean = false;
 
   constructor() {}
 
