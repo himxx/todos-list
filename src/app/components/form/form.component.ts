@@ -8,7 +8,7 @@ import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 })
 export class FormComponent implements OnInit {
   @Output() newTaskEmit = new EventEmitter<Task>();
-  @Input() editMode!:boolean;
+  @Input() editMode!: boolean;
   task: Task = {
     text: '',
     date: '',

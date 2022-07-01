@@ -9,7 +9,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class TodosComponent implements OnInit {
   todos: Task[] = [];
-  @Input() editMode!:boolean;
+  @Input() editMode!: boolean;
 
   constructor(private taskService: TaskService) {}
 
@@ -22,7 +22,7 @@ export class TodosComponent implements OnInit {
     this.taskService
       .addTask(task)
       .subscribe((task) => this.todos.unshift(task));
-      this.sortTasks();
+    this.sortTasks();
   }
 
   markTaskAsDone(task: Task) {
@@ -37,7 +37,7 @@ export class TodosComponent implements OnInit {
       .subscribe(
         () => (this.todos = this.todos.filter((t) => t.id !== task.id))
       );
-      this.sortTasks();
+    this.sortTasks();
   }
 
   deleteAll() {
@@ -47,8 +47,8 @@ export class TodosComponent implements OnInit {
   }
 
   private sortTasks() {
-    this.todos = this.todos.sort((a:Task, b:Task) => 
+    this.todos = this.todos.sort((a: Task, b: Task) =>
       a.done === b.done ? 0 : a.done ? 1 : -1
-    )
+    );
   }
 }
